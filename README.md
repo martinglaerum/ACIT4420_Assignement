@@ -48,7 +48,6 @@ ACIT4420_Message_Sender/
 ├── morning_greetings/
 │   ├── __init__.py
 │   ├── main.py                # Entry point for the game menu
-│   ├── 
 │   ├── contact_manager.py
 │   ├── message_generator.py 
 │   ├── message_sender.py 

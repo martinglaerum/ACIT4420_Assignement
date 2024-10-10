@@ -1,6 +1,6 @@
-# ACIT_Message_Sender
+# ACIT4420_Message_Sender
 
-**ACIT_Message_Sender** is a tool for that will automatically create and send morning greeting messages to a specified list of contacts. The package includes the functionality of creating and managing a list of contacts. This list contains names, emails and preffered time to be messaged. The package also contains the ability to create, send and log messages.
+**ACIT4420_Message_Sender** is a tool for that will automatically create and send morning greeting messages to a specified list of contacts. The package includes the functionality of creating and managing a list of contacts. This list contains names, emails and preffered time to be messaged. The package also contains the ability to create, send and log messages.
 
 ## Table of Contents
 - [Features](#features)
@@ -19,8 +19,8 @@
 To get started, follow these steps:
 1. **Clone the Repository** (or download the package):
    ```bash
-   git clone https://github.com/martinglaerum/ACIT_GAME_Module.git
-   cd ACIT_GAME_Module
+   git clone https://github.com/martinglaerum/ACIT4420_Message_Sender.git
+   cd ACIT4420_Message_Sender
    ```
 2. **Create a Virtual Environment** (recommended):
    ```bash
@@ -43,7 +43,7 @@ Choosing **Send messages** will automatically send the personalized messages to 
 ## Project Structure
 Here is a brief overview of the project's structure:
 ```
-ACIT_Message_Sender/
+ACIT4420_Message_Sender/
 │
 ├── morning_greetings/
 │   ├── __init__.py

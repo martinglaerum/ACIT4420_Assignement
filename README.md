@@ -1,6 +1,6 @@
 # ACIT4420_Message_Sender
 
-This project is part of an assignement in the course ACIT4420. It will not send messages automatically, and is only meant as a learning exercise for understanding python packages. **ACIT4420_Message_Sender** is a tool for that will automatically create and send morning greeting messages to a specified list of contacts. The package includes the functionality of creating and managing a list of contacts. This list contains names, emails and preffered time to be messaged. The package also contains the ability to create, send and log messages.
+This project is part of an assignement in the course ACIT4420. It will not send messages automatically, and is only meant as a learning exercise for understanding python packages. **ACIT4420_Message_Sender** is a tool that will automatically create and send morning greeting messages to a specified list of contacts. The package includes the functionality of creating and managing a list of contacts. This list contains names, emails and preffered time to be messaged. The package also contains the ability to create, send and log messages.
 
 ## Table of Contents
 - [Features](#features)

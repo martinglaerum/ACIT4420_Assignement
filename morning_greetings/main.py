@@ -23,7 +23,7 @@ def main():
         contacts = contact_manager.ContactsManager() # Creates an object containing the contacts
            
             # Sends a message for each contact
-        for people in Contacts.contacts:
+        for people in contacts.contacts:
             try:
                 message = message_generator.generate_message(people["name"]) # Creates the message
                 message_sender.send_message(people["email"], message) # Sends the message

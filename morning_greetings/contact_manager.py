@@ -37,7 +37,7 @@ class ContactsManager:
         return self.contacts
 
         # Writes changes to the contacts to the contact.txt file
-    def save(self):
+    def save_contacts(self):
         file_path = os.path.join(BASE_DIR, "contacts.txt")
 
         with open(file_path, 'wt') as file:
@@ -64,10 +64,10 @@ def manage():
         name = input("Name of the new contact: ")
         email = input(f"{name}'s email: ")
         preferred_time = input(f"{name}'s preffered time to be contacted: ")
-        Contacts.add(name, email, preferred_time)
+        Contacts.add_contact(name, email, preferred_time)
     elif choice == '2':
         name = input("Name of the contact to remove: ")
-        Contacts.remove(name)
+        Contacts.remove_contact(name)
     elif choice == '3':
         Contacts.list_contacts()
     else:

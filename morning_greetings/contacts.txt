@@ -1,0 +1,4 @@
+Alice,abc@example.com,08:00 AM
+Bob,bcd@example.com,09:00 AM
+Charlie,cde@example.com,07:30 AM
+Irene,dde@example.com,07:30 AM

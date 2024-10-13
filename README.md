@@ -49,9 +49,11 @@ ACIT4420_Message_Sender/
 │   ├── __init__.py
 │   ├── main.py                # Entry point for the game menu
 │   ├── contact_manager.py
+│   ├── contacts.txt
 │   ├── message_generator.py 
 │   ├── message_sender.py 
-│   └── logger.py
+│   ├── logger.py 
+│   └── message_log.txt
 │
 ├── setup.py                   # Installation script
 └── README.md                  # Project documentation (this file)

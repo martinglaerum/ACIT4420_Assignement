@@ -5,6 +5,7 @@ import datetime
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def log_message(contact, message):
+    '''Logs all messages sent into a seperate file'''
     file_path = os.path.join(BASE_DIR, "message_log.txt") # Specifies the path to the log file
 
         # Opens the log file and stores the message sent, including who it was sent to and when it was sent

@@ -1,14 +1,15 @@
 import sys
 import os
+
+    # Ensure the parent directory is in the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
 import contact_manager
 import message_generator
 import message_sender
 import logger
 
-
-    # Ensure the parent directory is in the Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 
 def main():
@@ -19,7 +20,7 @@ def main():
 
     if choice == '1': # Sends messages to all contacts in the contacts.txt file
 
-        Contacts = contact_manager.ContactsManager() # Creates an object containing the contacts
+        contacts = contact_manager.ContactsManager() # Creates an object containing the contacts
            
             # Sends a message for each contact
         for people in Contacts.contacts:

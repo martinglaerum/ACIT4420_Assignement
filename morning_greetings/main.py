@@ -13,6 +13,7 @@ import logger
 
 
 def main():
+    '''Main function that provides an interface for sending messages and managing contacts.'''
     print("What do you want to do:")
     print("1. Send messages")
     print("2. Manage contacts")

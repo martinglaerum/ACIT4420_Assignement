@@ -9,7 +9,7 @@ class ContactsManager:
 
         # Initializes the contacts dictionary
     def __init__(self):
-        contacts = []
+        self.contacts = []
             # Finds the current file path for the file containing the contacts
         file_path = os.path.join(BASE_DIR, "contacts.txt")
 
@@ -64,7 +64,7 @@ class ContactsManager:
 
 def manage():
         # Creates an object containing all contacts
-    Contacts = ContactsManager()
+    contacts = ContactsManager()
 
     print("What do you want to do")
     print("1. Add a contact")
@@ -77,11 +77,11 @@ def manage():
         name = input("Name of the new contact: ")
         email = input(f"{name}'s email: ")
         preferred_time = input(f"{name}'s preffered time to be contacted: ")
-        Contacts.add_contact(name, email, preferred_time)
+        contacts.add_contact(name, email, preferred_time)
     elif choice == '2':  # Removes a contact
         name = input("Name of the contact to remove: ")
-        Contacts.remove_contact(name)
+        contacts.remove_contact(name)
     elif choice == '3': # Lists all contacts
-        Contacts.list_contacts()
+        contacts.list_contacts()
     else:
         print("Invalid choice. Please choose a valid number.")

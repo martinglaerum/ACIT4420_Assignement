@@ -4,11 +4,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class ContactsManager:
+    '''Manages a list of contacts stored in a text file.'''
+
         # Dictionary containing the contacts
     contacts = []
-
-        # Initializes the contacts dictionary
+  
     def __init__(self):
+        '''Initializes the contacts dictionary'''
         self.contacts = []
             # Finds the current file path for the file containing the contacts
         file_path = os.path.join(BASE_DIR, "contacts.txt")
@@ -23,8 +25,9 @@ class ContactsManager:
                     'preferred_time': preferred_time
                 })
 
-        # Adds a new contact to the contacts dictionary
+        
     def add_contact(self, name, email, preferred_time="08:00 AM"): 
+        '''Adds a new contact to the contacts dictionary'''
         self.contacts.append({
                     'name': name,
                     'email': email,
@@ -34,19 +37,23 @@ class ContactsManager:
             # Saves the new contact to the contacts.txt file
         self.save_contacts()
 
-        # Removes a contact if the inputted name matches an existing contact
+        
     def remove_contact(self, name): 
+        '''Removes a contact if the inputted name matches an existing contact'''
         self.contacts = [c for c in self.contacts if c['name'] != name]
 
             # Saves the new contact to the contacts.txt file
         self.save_contacts()
 
-        # Returns the contacts dictionary
-    def get_contacts(self):  
+        
+    def get_contacts(self):
+        '''Returns the contacts dictionary'''
         return self.contacts
 
-        # Saves changes in the contacts dictionary to the contact.txt file
+        
     def save_contacts(self):
+        '''Saves changes in the contacts dictionary to the contact.txt file'''
+
             # Finds the file path to the contacts.txt file
         file_path = os.path.join(BASE_DIR, "contacts.txt")
 
@@ -56,13 +63,16 @@ class ContactsManager:
                     # Formats each contact as a line with specific syntax so the file can easily be read
                 file.write(f"{contact['name']},{contact['email']},{contact['preferred_time']}\n")
 
-        # Lists all the contacts in the contacts dictionary
+        
     def list_contacts(self):
+        '''Lists all the contacts in the contacts dictionary'''
         for contact in self.contacts:
             print(f"Name: {contact['name']}, Email: {contact['email']}, Preferred Time: {contact['preferred_time']}")
 
 
 def manage():
+    '''Provides a command-line interface for managing contacts.'''
+
         # Creates an object containing all contacts
     contacts = ContactsManager()
 

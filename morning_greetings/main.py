@@ -1,12 +1,14 @@
-import contact_manager # replace with from . import contact_manager
+import sys
+import os
+import contact_manager
 import message_generator
 import message_sender
 import logger
 
 
-# Ensure the parent directory is in the Python path
-#sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-# sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+    # Ensure the parent directory is in the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 
 def main():
@@ -15,15 +17,16 @@ def main():
     print("2. Manage contacts")
     choice = input("Enter the representing your choice: ")
 
-    if choice == '1':
-            # Creates an object containing the contacts
-        Contacts = contact_manager.ContactsManager()
+    if choice == '1': # Sends messages to all contacts in the contacts.txt file
+
+        Contacts = contact_manager.ContactsManager() # Creates an object containing the contacts
+           
             # Sends a message for each contact
         for people in Contacts.contacts:
             try:
                 message = message_generator.generate_message(people["name"]) # Creates the message
                 message_sender.send_message(people["email"], message) # Sends the message
-                logger.log_message(people["name"], message) # Logs all messages sent
+                logger.log_message(people["name"], message) # Logs the message
             except Exception as e:
                 print(f"Error sending message to {people['name']}: {e}")
     elif choice == '2':

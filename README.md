@@ -6,7 +6,6 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Games Included](#games-included)
 - [Project Structure](#project-structure)
 - [License](#license)
 ## Features
@@ -59,7 +58,7 @@ ACIT4420_Message_Sender/
 └── README.md                  # Project documentation (this file)
 ```
 ### Key Files:
-- **`main.py`**: Contains the main function that launches the game menu.
+- **`main.py`**: Contains the main function that launches the program.
 - **`setup.py`**: Script for installing the package.
 - **`contact_manager.py`**: Script for managing the contacts.
 - **`message_generator.py `**: Script creating a personalized message.
